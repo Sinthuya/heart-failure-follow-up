@@ -36,17 +36,26 @@ SELECT
 FROM clinical_records;
 ```
    
-4. Data cleaning and formatting
+3. Data cleaning and formatting
 
-   
+ ```sql
+--Added a new colum 'id' as the primary key for my own referance
+
+ALTER TABLE clinical_records
+ADD COLUMN id SERIAL PRIMARY KEY;
+```
 
 ### Explanatory data analysis
 
 EDA involved exploring the clinical data to answer key questions such as:
 1. Which demographic factors, such as age and gender, are strongly associated with heart failure incidence?
+
+```sql
+
+   
 2. What is the prevalance of conditions like hypertension and diabetes with the heart failure patients?
-3. How do ejection fraction and serum creatinine levels vary over the follow-up period?
-4. What is the impact of lifestyle choices, such as smoking habits, during the followu up of heart failure?
-5. What is the average follow up time in days after a heart failure?
-6. What is the overall survival rate among heart failure patients and men vs women during the follow-up period?
+4. How do ejection fraction and serum creatinine levels vary over the follow-up period?
+5. What is the impact of lifestyle choices, such as smoking habits, during the followu up of heart failure?
+6. What is the average follow up time in days after a heart failure?
+7. What is the overall survival rate among heart failure patients and men vs women during the follow-up period?
    
