@@ -16,7 +16,29 @@ The primary dataset used for this analysis is the "heart-failure-clinical-record
 In the initial data preparation phase, I performed the folloing tasks:
 1. data loading and inspection
 2. Handling missing values
-3. Data cleaning and formatting
+
+```sql
+SELECT
+    COUNT(*) - COUNT(id) AS missing_id,
+    COUNT(*) - COUNT(age) AS missing_age,
+    COUNT(*) - COUNT(anaemia) AS missing_anaemia,
+    COUNT(*) - COUNT(cpk) AS missing_cpk,
+    COUNT(*) - COUNT(diabetes) AS missing_diabetes,
+    COUNT(*) - COUNT(ejection_fraction) AS missing_ejection_fraction,
+    COUNT(*) - COUNT(high_blood_pressure) AS missing_high_blood_pressure,
+    COUNT(*) - COUNT(platelets) AS missing_platelets,
+    COUNT(*) - COUNT(sex) AS missing_sex,
+    COUNT(*) - COUNT(serum_creatinine) AS missing_serum_creatinine,
+    COUNT(*) - COUNT(serum_sodium) AS missing_serum_sodium,
+    COUNT(*) - COUNT(smoking) AS missing_smoking,
+    COUNT(*) - COUNT(follow_up_days) AS missing_follow_up_days,
+    COUNT(*) - COUNT(death_event) AS missing_death_event
+FROM clinical_records;
+```
+   
+4. Data cleaning and formatting
+
+   
 
 ### Explanatory data analysis
 
