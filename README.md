@@ -44,18 +44,101 @@ FROM clinical_records;
 ALTER TABLE clinical_records
 ADD COLUMN id SERIAL PRIMARY KEY;
 ```
+```sql
+-- Add a temporary column to store the updated values
+ALTER TABLE clinical_records ADD COLUMN sex_temp text;
+
+-- Update the temporary column
+UPDATE clinical_records
+SET sex_temp = CASE WHEN sex = 0 THEN 'female' ELSE 'male' END;
+
+-- Drop the original 'sex' column
+ALTER TABLE clinical_records DROP COLUMN sex;
+
+-- Rename the temporary column to 'sex'
+ALTER TABLE clinical_records RENAME COLUMN sex_temp TO sex;
+```
 
 ### Explanatory data analysis
 
 EDA involved exploring the clinical data to answer key questions such as:
-1. Which demographic factors, such as age and gender, are strongly associated with heart failure incidence?
+1. Which demographic factors, such as age and gender are represnted in the dataset?
 
 ```sql
-
+-- Retrieve percentage distribution of gender
+SELECT
+    sex,
+    COUNT(*) AS total_patients,
+    ROUND((COUNT(*) * 100.0 / (SELECT COUNT(*) FROM clinical_records)))::integer AS percentage
+FROM clinical_records
+GROUP BY sex
+ORDER BY sex;
+```
+```sql
+-- Retrieve percentage distribution of age groups
+SELECT
+    WIDTH_BUCKET(age, 0, 100, 10) * 10 - 9 AS age_from,
+    WIDTH_BUCKET(age, 0, 100, 10) * 10 AS age_to,
+    COUNT(*) AS total_patients,
+    ROUND((COUNT(*) * 100.0 / (SELECT COUNT(*) FROM clinical_records)))::integer AS percentage
+FROM clinical_records
+GROUP BY age_from, age_to
+ORDER BY age_from;
+```
    
-2. What is the prevalance of conditions like hypertension and diabetes with the heart failure patients?
-4. How do ejection fraction and serum creatinine levels vary over the follow-up period?
-5. What is the impact of lifestyle choices, such as smoking habits, during the followu up of heart failure?
-6. What is the average follow up time in days after a heart failure?
-7. What is the overall survival rate among heart failure patients and men vs women during the follow-up period?
+2. What is the prevalance of conditions like hypertension and diabetes with the follow-up of patients with heart failure?
+
+```sql
+-- Calculate the prevalence of hypertension 
+SELECT
+    hypertension,
+    COUNT(*) AS total_patients,
+    ROUND((COUNT(*) * 100.0 / (SELECT COUNT(*) FROM clinical_records)))::integer AS prevalence_percentage
+FROM clinical_records
+GROUP BY hypertension;
+```
+```sql
+-- Calculate the prevalence of diabetes 
+SELECT
+    diabetes,
+    COUNT(*) AS total_patients,
+    ROUND((COUNT(*) * 100.0 / (SELECT COUNT(*) FROM clinical_records)))::integer AS prevalence_percentage
+FROM clinical_records
+WHERE diabetes = true 
+GROUP BY diabetes
+```
+3. How do ejection fraction and serum creatinine levels vary over the follow-up period?
+
+```sql
+-- Analyse the variation of ejection fraction and serum creatinine over the follow-up period
+SELECT
+    AVG(ejection_fraction) AS avg_ejection_fraction,
+    AVG(serum_creatinine) AS avg_serum_creatinine
+FROM clinical_records
+```
+
+4. What is the impact of lifestyle choices, such as smoking habits, during the followu up of heart failure?
+
+```sql
+-- Analyse the distribution of smoking habits during the follow-up of heart failure
+SELECT
+    smoking,
+    COUNT(*) AS total_patients,
+    ROUND((COUNT(*) * 100.0 / (SELECT COUNT(*) FROM clinical_records)))::integer AS smoking_prevalence
+FROM clinical_records
+GROUP BY smoking
+```
+
+6. What is the minimum, maximum and average follow up time in days after a heart failure?
+
+```sql
+SELECT
+    MIN(follow_up_days) AS min_follow_up_days,
+    MAX(follow_up_days) AS max_follow_up_days,
+    AVG(follow_up_days) AS avg_follow_up_days
+FROM clinical_records
+```
+
+
+8. What is the overall survival rate among heart failure patients and men vs women during the follow-up period?
    
