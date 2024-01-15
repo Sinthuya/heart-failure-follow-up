@@ -141,4 +141,19 @@ FROM clinical_records
 
 
 8. What is the overall survival rate among heart failure patients and men vs women during the follow-up period?
+
+```sql
+-- Calculates overall survival rate and death rate and compare rates between men and women
+SELECT
+    sex,
+    COUNT(*) AS total_patients,
+    SUM(CASE WHEN death_event = false THEN 1 ELSE 0 END) AS survivors,
+    SUM(CASE WHEN death_event = true THEN 1 ELSE 0 END) AS deaths,
+    ROUND((SUM(CASE WHEN death_event = false THEN 1 ELSE 0 END) * 100.0 / COUNT(*)))::integer AS survival_rate,
+    ROUND((SUM(CASE WHEN death_event = true THEN 1 ELSE 0 END) * 100.0 / COUNT(*)))::integer AS death_rate
+FROM clinical_records
+GROUP BY sex
+ORDER BY sex;
+---
+
    
