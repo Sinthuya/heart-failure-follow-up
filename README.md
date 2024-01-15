@@ -156,4 +156,10 @@ GROUP BY sex
 ORDER BY sex;
 ---
 
+### Results/findings
+
+There were more males(65%) than females(35%). 
+
+
+
    
