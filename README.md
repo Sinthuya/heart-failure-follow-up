@@ -86,15 +86,16 @@ GROUP BY age_from, age_to
 ORDER BY age_from;
 ```
    
-2. What is the prevalance of conditions like hypertension and diabetes with the follow-up of patients with heart failure?
+2. What is the prevalance of conditions like high blood pressure and diabetes with the follow-up of patients with heart failure?
 
 ```sql
 -- Calculate the prevalence of hypertension 
 SELECT
-    hypertension,
+    high_blood_pressure,
     COUNT(*) AS total_patients,
     ROUND((COUNT(*) * 100.0 / (SELECT COUNT(*) FROM clinical_records)))::integer AS prevalence_percentage
 FROM clinical_records
+WHERE high_blood_pressure = true 
 GROUP BY hypertension;
 ```
 ```sql
@@ -158,7 +159,8 @@ ORDER BY sex;
 
 ### Results/findings
 
-There were more males(65%) than females(35%). 
+There were more males(65%) than females(35%) in the dataset. The ages ranged from 40 to 95 years old and an average age of 61 years.  A recent report by the American Heart Association found that high blood pressure and diabetes may be common among people with heart failure. it is reflected in this dataset with 35% with high blood pressure and nearly half (42%) have diabetes. while only 14% had both high blood pressure and diabetes.
+In patients with heart failure, serum creatinine levels and ejection fraction are two important factors that are monitored during follow-up. Ejection fraction is a measure of the percentage of blood that is pumped out of the left ventricle of the heart with each contraction and the normal range is between 50% and 70%. In this dataset the average is 38%, which is significanly lower the the normal range and it idicates a sign of heart failure or an underlying heart condition. Serum creatinine levels, on the other hand, are used to assess kidney function and are often elevated in patients with heart failure.
 
 
 
