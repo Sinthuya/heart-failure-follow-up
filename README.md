@@ -130,7 +130,7 @@ FROM clinical_records
 GROUP BY smoking
 ```
 
-6. What is the minimum, maximum and average follow up time in days after a heart failure?
+5. What is the minimum, maximum and average follow up time in days after a heart failure?
 
 ```sql
 SELECT
@@ -141,7 +141,7 @@ FROM clinical_records
 ```
 
 
-8. What is the overall survival rate among heart failure patients and men vs women during the follow-up period?
+6. What is the overall survival rate among heart failure patients and men vs women during the follow-up period?
 
 ```sql
 -- Calculates overall survival rate and death rate and compare rates between men and women
@@ -159,8 +159,12 @@ ORDER BY sex;
 
 ### Results/findings
 
-There were more males(65%) than females(35%) in the dataset. The ages ranged from 40 to 95 years old and an average age of 61 years.  A recent report by the American Heart Association found that high blood pressure and diabetes may be common among people with heart failure. it is reflected in this dataset with 35% with high blood pressure and nearly half (42%) have diabetes. while only 14% had both high blood pressure and diabetes.
-In patients with heart failure, serum creatinine levels and ejection fraction are two important factors that are monitored during follow-up. Ejection fraction is a measure of the percentage of blood that is pumped out of the left ventricle of the heart with each contraction and the normal range is between 50% and 70%. In this dataset the average is 38%, which is significanly lower the the normal range and it idicates a sign of heart failure or an underlying heart condition. Serum creatinine levels, on the other hand, are used to assess kidney function and are often elevated in patients with heart failure.
+The 299 patients who had a heart failure had a minimum, maximum, and avegare of 4, 285 and 130 daysfor thier follow-up consectivly.
+The There were more males(65%) than females(35%) in the dataset. The ages ranged from 40 to 95 years old and an average age of 61 years.  A recent report by the American Heart Association found that high blood pressure and diabetes may be common among people with heart failure. it is reflected in this dataset with 35% with high blood pressure and nearly half (42%) have diabetes. while only 14% had both high blood pressure and diabetes.
+In patients with heart failure, serum creatinine levels and ejection fraction are two important factors that are monitored during follow-up. Ejection fraction is a measure of the percentage of blood that is pumped out of the left ventricle of the heart with each contraction and the normal range is between 50% and 70%. In this dataset the average is 38%, which is significanly lower the the normal range and it indicates a sign of heart failure or an underlying heart condition. Serum creatinine levels, on the other hand, are used to assess kidney function and are often elevated in patients with heart failure. The normal range is between 60 to 110micromol/L for men and 45 to 90micromol/L for women). In This datsewt we see that the average is 137micromol/Lfor both men and women, Which indicates a sign of heart failure or an underlying heart condition.
+Smoking causes the blood vessels in the body including those in the heart to constrict, which can make the symptoms of heart failure worse. we see that in in this dataset almost a third of patients (32%)
+are still smoking after the heart failure.
+The death rate during the follow-up was almost 32% for both men and women and the survival rate is 68%.
 
 
 
