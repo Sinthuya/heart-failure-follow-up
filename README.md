@@ -159,13 +159,28 @@ ORDER BY sex;
 
 ### Results/findings
 
-The 299 patients who had a heart failure had a minimum, maximum, and avegare of 4, 285 and 130 daysfor thier follow-up consectivly.
-The There were more males(65%) than females(35%) in the dataset. The ages ranged from 40 to 95 years old and an average age of 61 years.  A recent report by the American Heart Association found that high blood pressure and diabetes may be common among people with heart failure. it is reflected in this dataset with 35% with high blood pressure and nearly half (42%) have diabetes. while only 14% had both high blood pressure and diabetes.
-In patients with heart failure, serum creatinine levels and ejection fraction are two important factors that are monitored during follow-up. Ejection fraction is a measure of the percentage of blood that is pumped out of the left ventricle of the heart with each contraction and the normal range is between 50% and 70%. In this dataset the average is 38%, which is significanly lower the the normal range and it indicates a sign of heart failure or an underlying heart condition. Serum creatinine levels, on the other hand, are used to assess kidney function and are often elevated in patients with heart failure. The normal range is between 60 to 110micromol/L for men and 45 to 90micromol/L for women). In This datsewt we see that the average is 137micromol/Lfor both men and women, Which indicates a sign of heart failure or an underlying heart condition.
-Smoking causes the blood vessels in the body including those in the heart to constrict, which can make the symptoms of heart failure worse. we see that in in this dataset almost a third of patients (32%)
-are still smoking after the heart failure.
-The death rate during the follow-up was almost 32% for both men and women and the survival rate is 68%.
+The dataset comprising 299 patients with heart failure revealed diverse historical and demographic insights. Patients experienced follow-up periods ranging from a minimum of 4 days to a maximum of 285 days, with an average follow-up duration of 130 days.
+In terms of gender distribution, the dataset skewed towards males (65%) compared to females (35%). The age spectrum ranged from 40 to 95 years, with an average age of 61 years. Notably, 35% of patients exhibited high blood pressure, and 42% had diabetes, aligning with recent findings from the American Heart Association, highlighting how common these conditions are in heart failure cases. Additionally, only 14% of patients presented with both high blood pressure and diabetes.
+Critical clinical indicators for heart failure, such as ejection fraction and serum creatinine levels, were assessed. The average ejection fraction, measuring the percentage of blood pumped out of the left ventricle with each contraction, was 38%—significantly below the normal range of 50% to 70%. Meanwhile, the average serum creatinine level, an indicator of kidney function, was at 137 micromol/L for both men and women, again showing the potential heart failure or an underlying cardiac condition.
+Despite the well-known exacerbating effects of smoking on heart failure symptoms, the dataset revealed that nearly a third of patients (32%) continued smoking post-heart failure.
+During the follow-up period, the death rate reached approximately 32% for both men and women, while the survival rate stood at 68%. These figures highlight the significant impact of heart failure on patient outcomes, emphasizing the need for targeted interventions and ongoing research into improving the quality of life
 
+
+### Recomendations
+
+Based on the analysis I recomend the following:
+
+Develop public health campaigns targeting lifestyle factors, such as smoking habits, to reduce the incidence of heart failure.
+Establish a long-term monitoring system to continue tracking trends in heart failure and related factors
+Develop education and awareness programs to inform the public about the importance of regular health check-ups, early intervention and followe-ups.
+
+### Limitations
+
+Sample Size: The dataset may have a limited sample size (299 patients), which could affect the generalizability of findings to larger populations.
+Limited Variables: The available 13 clinical features may not cover all relevant aspects of heart failure.
+Assumption on Death Event Indicator: Additional information on cause of death could provide a more accurate picture.
+Follow-Up Period: The length of the follow-up period may be limited, limiting the ability to capture long term trends or outcomes.
+Limited Lifestyle Data: The dataset may lack detailed lifestyle information beyond smoking habits, limiting the exploration of broader lifestyle factors that could influence heart failure.
 
 
    
