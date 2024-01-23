@@ -2,7 +2,15 @@
 
 ## Table of Contents
 
-- [Project Overview](#project-overview)
+- [Project overview](#project-overview)
+- [Data sources](-data-sources)
+- [Tools](#tools)
+- [Data cleaning/preparation](#data-cleaning-and-preparation)
+- [Explanatory data analysis (EDA)](#explanatory-data-analysis)
+- [Results/Findings](#results-and-findings)
+- [Recomendations](#recomendations)
+- [Limitations](#limitations)
+- [References](#references)
 
 ### Project overview
 
