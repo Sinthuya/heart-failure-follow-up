@@ -2,7 +2,7 @@
 
 ### Project overview
 
-This data analysis project utilises PostgreSQL for comprehensive analysis of clinical records from 299 heart failure patients, aiming to extract insights into key clinical features and identify trends during their follow-up period.This will contribute to a deeper understanding of heart failure and its associated factors.
+This data analysis project utilises PostgreSQL for comprehensive analysis of clinical records from 299 heart failure patients, aiming to extract insights into key clinical features and identify trends during their follow-up period. This will contribute to a deeper understanding of heart failure and its associated factors.
 
 ### Data source
 The primary dataset used for this analysis is the "heart-failure-clinical-records" from The UCI Machine Learning Repository. [Click here to access the dataset](https://archive.ics.uci.edu/dataset/519/heart+failure+clinical+records)
@@ -11,9 +11,9 @@ The primary dataset used for this analysis is the "heart-failure-clinical-record
 
 - PostgreSQL - data cleaning and data analysis
 
-### Data cleaning/prepartaion 
+### Data cleaning/preparation 
 
-In the initial data preparation phase, I performed the folloing tasks:
+In the initial data preparation phase, I performed the following tasks:
 1. data loading and inspection
 2. Handling missing values
 
@@ -62,7 +62,7 @@ ALTER TABLE clinical_records RENAME COLUMN sex_temp TO sex;
 ### Explanatory data analysis
 
 EDA involved exploring the clinical data to answer key questions such as:
-1. Which demographic factors, such as age and gender are represnted in the dataset?
+1. Which demographic factors, such as age and gender are represented in the dataset?
 
 ```sql
 -- Retrieve percentage distribution of gender
@@ -86,7 +86,7 @@ GROUP BY age_from, age_to
 ORDER BY age_from;
 ```
    
-2. What is the prevalance of conditions like high blood pressure and diabetes with the follow-up of patients with heart failure?
+2. What is the prevalence of conditions like high blood pressure and diabetes with the follow-up of patients with heart failure?
 
 ```sql
 -- Calculate the prevalence of hypertension 
@@ -118,7 +118,7 @@ SELECT
 FROM clinical_records
 ```
 
-4. What is the impact of lifestyle choices, such as smoking habits, during the followu up of heart failure?
+4. What is the impact of lifestyle choices, such as smoking habits, during the follow-up of heart failure?
 
 ```sql
 -- Analyse the distribution of smoking habits during the follow-up of heart failure
@@ -163,16 +163,16 @@ The dataset comprising 299 patients with heart failure revealed diverse historic
 In terms of gender distribution, the dataset skewed towards males (65%) compared to females (35%). The age spectrum ranged from 40 to 95 years, with an average age of 61 years. Notably, 35% of patients exhibited high blood pressure, and 42% had diabetes, aligning with recent findings from the American Heart Association, highlighting how common these conditions are in heart failure cases. Additionally, only 14% of patients presented with both high blood pressure and diabetes.
 Critical clinical indicators for heart failure, such as ejection fraction and serum creatinine levels, were assessed. The average ejection fraction, measuring the percentage of blood pumped out of the left ventricle with each contraction, was 38%—significantly below the normal range of 50% to 70%. Meanwhile, the average serum creatinine level, an indicator of kidney function, was at 137 micromol/L for both men and women, again showing the potential heart failure or an underlying cardiac condition.
 Despite the well-known exacerbating effects of smoking on heart failure symptoms, the dataset revealed that nearly a third of patients (32%) continued smoking post-heart failure.
-During the follow-up period, the death rate reached approximately 32% for both men and women, while the survival rate stood at 68%. These figures highlight the significant impact of heart failure on patient outcomes, emphasizing the need for targeted interventions and ongoing research into improving the quality of life
+During the follow-up period, the death rate reached approximately 32% for both men and women, while the survival rate stood at 68%. These figures highlight the significant impact of heart failure on patient outcomes, emphasizing the need for targeted interventions and ongoing research into improving the quality of life.
 
 
 ### Recomendations
 
-Based on the analysis I recomend the following:
+Based on the analysis I recomnend the following:
 
 - Develop public health campaigns targeting lifestyle factors, such as smoking habits, to reduce the incidence of heart failure.
 - Establish a long-term monitoring system to continue tracking trends in heart failure and related factors
-- Develop education and awareness programs to inform the public about the importance of regular health check-ups, early intervention and followe-ups.
+- Develop education and awareness programs to inform the public about the importance of regular health check-ups, early intervention and follow-ups.
 
 ### Limitations
 
@@ -182,5 +182,8 @@ Based on the analysis I recomend the following:
 - Follow-Up Period: The length of the follow-up period may be limited, limiting the ability to capture long term trends or outcomes.
 - Limited Lifestyle Data: The dataset may lack detailed lifestyle information beyond smoking habits, limiting the exploration of broader lifestyle factors that could influence heart failure.
 
+### References
+
+[American Heart Association](https://newsroom.heart.org/news/recent-scientific-studies-offer-insight-into-heart-and-stroke-health)
 
    
