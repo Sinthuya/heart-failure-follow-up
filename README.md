@@ -1,5 +1,9 @@
 # heart failure follow-up analysis
 
+## Table of Contents
+
+- [Project Overview](#project-overview)
+
 ### Project overview
 
 This data analysis project utilises PostgreSQL for comprehensive analysis of clinical records from 299 heart failure patients, aiming to extract insights into key clinical features and identify trends during their follow-up period. This will contribute to a deeper understanding of heart failure and its associated factors.
