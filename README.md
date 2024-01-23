@@ -178,9 +178,9 @@ Despite the well-known exacerbating effects of smoking on heart failure symptoms
 During the follow-up period, the death rate reached approximately 32% for both men and women, while the survival rate stood at 68%. These figures highlight the significant impact of heart failure on patient outcomes, emphasizing the need for targeted interventions and ongoing research into improving the quality of life.
 
 
-### Recomendations
+### Recommendations
 
-Based on the analysis I recomnend the following:
+Based on the analysis I recommend the following:
 
 - Develop public health campaigns targeting lifestyle factors, such as smoking habits, to reduce the incidence of heart failure.
 - Establish a long-term monitoring system to continue tracking trends in heart failure and related factors
