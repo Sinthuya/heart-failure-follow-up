@@ -155,7 +155,7 @@ SELECT
 FROM clinical_records
 GROUP BY sex
 ORDER BY sex;
----
+```
 
 ### Results/findings
 
@@ -170,17 +170,17 @@ During the follow-up period, the death rate reached approximately 32% for both m
 
 Based on the analysis I recomend the following:
 
-Develop public health campaigns targeting lifestyle factors, such as smoking habits, to reduce the incidence of heart failure.
-Establish a long-term monitoring system to continue tracking trends in heart failure and related factors
-Develop education and awareness programs to inform the public about the importance of regular health check-ups, early intervention and followe-ups.
+- Develop public health campaigns targeting lifestyle factors, such as smoking habits, to reduce the incidence of heart failure.
+- Establish a long-term monitoring system to continue tracking trends in heart failure and related factors
+- Develop education and awareness programs to inform the public about the importance of regular health check-ups, early intervention and followe-ups.
 
 ### Limitations
 
-Sample Size: The dataset may have a limited sample size (299 patients), which could affect the generalizability of findings to larger populations.
-Limited Variables: The available 13 clinical features may not cover all relevant aspects of heart failure.
-Assumption on Death Event Indicator: Additional information on cause of death could provide a more accurate picture.
-Follow-Up Period: The length of the follow-up period may be limited, limiting the ability to capture long term trends or outcomes.
-Limited Lifestyle Data: The dataset may lack detailed lifestyle information beyond smoking habits, limiting the exploration of broader lifestyle factors that could influence heart failure.
+- Sample Size: The dataset may have a limited sample size (299 patients), which could affect the generalizability of findings to larger populations.
+- Limited Variables: The available 13 clinical features may not cover all relevant aspects of heart failure.
+- Assumption on Death Event Indicator: Additional information on cause of death could provide a more accurate picture.
+- Follow-Up Period: The length of the follow-up period may be limited, limiting the ability to capture long term trends or outcomes.
+- Limited Lifestyle Data: The dataset may lack detailed lifestyle information beyond smoking habits, limiting the exploration of broader lifestyle factors that could influence heart failure.
 
 
    
